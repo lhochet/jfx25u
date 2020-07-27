@@ -191,7 +191,10 @@ void AVFAudioSpectrumUnit::UpdateBands(int size, const float* magnitudes, const 
     // Call our listener to dispatch the spectrum event
     if (mSpectrumCallbackProc) {
         double duration = (double) mSamplesPerInterval / (double) 44100;
-        mSpectrumCallbackProc(mSpectrumCallbackContext, duration);
+        // We do not provide timestamp here. It will be queried from EventQueueThread
+        // due to reading current time from AVPlayer might hang when called
+        // from audio processing thread. This function is called from this thread.
+        mSpectrumCallbackProc(mSpectrumCallbackContext, duration, -1.0);
     }
 
     unlockBands();
