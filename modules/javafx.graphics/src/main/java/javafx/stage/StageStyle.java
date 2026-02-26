@@ -136,5 +136,53 @@ public enum StageStyle {
      * @deprecated This is a preview feature which may be changed or removed in a future release.
      */
     @Deprecated(since = "25")
-    EXTENDED
+    EXTENDED,
+
+    /**
+     * Defines a {@code Stage} style with a Windows AppBar that is anchored to the Right edge.
+     * Only works on MS Windows.
+     */
+    APPBAR_RIGHT,
+
+    /**
+     * Defines a {@code Stage} style with a Windows AppBar that is anchored to the Top edge.
+     * Only works on MS Windows.
+     */
+    APPBAR_TOP,
+
+    /**
+     * Defines a {@code Stage} style with a Windows AppBar that is anchored to the Left edge.
+     * Only works on MS Windows.
+     */
+    APPBAR_LEFT,
+
+    /**
+     * Defines a {@code Stage} style with a Windows AppBar that is anchored to the Bottom edge.
+     * Only works on MS Windows.
+     */
+    APPBAR_BOTTOM,
+
+    /**
+     * Defines a {@code Stage} style with a Windows AppBar that is anchored to the Right edge and is a transparent window.
+     * Only works on MS Windows.
+     */
+    APPBAR_RIGHT_TRANSPARENT,
+
+    /**
+     * Defines a {@code Stage} style with a Windows AppBar that is anchored to the Top edge and is a transparent window.
+     * Only works on MS Windows.
+     */
+    APPBAR_TOP_TRANSPARENT,
+
+    /**
+     * Defines a {@code Stage} style with a Windows AppBar that is anchored to the Left edge and is a transparent window.
+     * Only works on MS Windows.
+     */
+    APPBAR_LEFT_TRANSPARENT,
+
+    /**
+     * Defines a {@code Stage} style with a Windows AppBar that is anchored to the Bottom edge and is a transparent window.
+     * Only works on MS Windows.
+     */
+    APPBAR_BOTTOM_TRANSPARENT
 }
